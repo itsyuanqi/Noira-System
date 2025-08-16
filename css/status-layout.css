@@ -1,0 +1,88 @@
+.nav-right {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* 电池容器 */
+.battery {
+    position: relative;
+    width: 50px;
+    height: 20px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    background: #222;
+    box-sizing: border-box;
+}
+
+/* 电量条 */
+.battery .battery-level {
+    height: 100%;
+    width: 0%;
+    /* 初始 0% */
+    background: #0f0;
+    transition: width 0.3s;
+    border-radius: 1px;
+}
+
+/* 百分比文字 */
+.battery .battery-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #eee;
+    top: 0px;
+}
+
+/* 电池凸头 */
+.battery::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: -6px;
+    width: 4px;
+    height: 10px;
+    background: #eee;
+    border-radius: 1px;
+}
+
+/* 充电状态 */
+.charging {
+    color: #fff;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.location {
+    font-style: italic;
+    text-align: center;
+    opacity: 0.85;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: solid 1px white;
+}
+
+.deco {
+    text-align: center;
+    opacity: 0.85;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: solid 1px white;
+}
+
+/* 网络状态 */
+.network {
+    font-weight: bold;
+    color: #eee;
+}
+
+.time-container {
+    text-align: right;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.time-container #time-hours {
+    font-size: 12px;
+}

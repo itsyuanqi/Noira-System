@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="/favicon.gif" type="image/gif">
+        <title>Noira，在遥远的星海尽头</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/status-layout.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+        <!-- CDN 依赖 -->
+        <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji@3.0.0/dist/markdown-it-emoji.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@4.0.0/dist/markdown-it-footnote.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-task-lists@2.1.1/dist/markdown-it-task-lists.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-sub@2.0.0/dist/markdown-it-sub.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-sup@2.0.0/dist/markdown-it-sup.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-mark@4.0.0/dist/markdown-it-mark.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: "dark"
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    </head>
+	<body>
+        <div class="background"></div>
+        <div class="foreground-stars"></div>
+        <!-- 主内容区 -->
+        <main>
+            <!-- 左侧导航栏 -->
+            <nav id="sidebar">
+				<div style="font-size: 20px; text-align: center; font-weight: bold;">
+					<span>─── ⋆⋅☆⋅⋆ ───<br>
+					<span>N O I R A</span><br>
+					<div style="font-size: 10px; text-align: center;">
+						ノイラ<br>
+						<span>在遥远的星海尽头，漂浮着一个被称为 Noira 的恒星系。</span>
+					</div>
+					<span>─── ⋆⋅☆⋅⋆ ───</span>
+				</div>
+                <ul id="file-tree">
+                    <!-- 文件列表会由 JS 动态生成 -->
+                </ul>
+            </nav>
+            <!-- 右侧 Markdown 渲染区 -->
+            <div id="markdown-container"></div>
+        </main>
+        <!-- 顶部 Nav Bar -->
+        <header>
+            <div class="logo">Noira System ノイラ システム</div>
+            <div class="nav-right">
+                <span class="deco">✈︎ ✉︎ ♡</span>
+                <span class="location">🏠︎ Noira 星球</span>
+                <!-- 电池图标 -->
+                <div class="battery">
+                    <div class="battery-level"></div>
+                    <span class="battery-text"></span>
+                </div>
+                <span class="charging"></span>
+                <!-- 网络 -->
+                <span class="network">--</span>
+                <div class="time-container">
+                    <div id="time-hours">--:--:-- AM</div>
+                    <div id="time-date">DD/MM/YYYY</div>
+                </div>
+                <span class="deco" id="detail-devices-info" style="cursor: pointer;">ⓘ</span>
+            </div>
+            </div>
+        </header>
+		<canvas id="starfield" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;opacity:1;"></canvas>
+        <canvas id="trailCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;opacity:1;"></canvas>
+
+		<script src="js/script.js"></script>
+		<script src="js/auto.js"></script>
+		<script src="js/interact.js"></script>
+
+		<script src="js/particle.js"></script>
+		<script src="js/trail.js/"></script>
+    </body>
+</html>
