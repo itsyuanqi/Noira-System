@@ -19,6 +19,7 @@ body {
     /* 星空背景 */
     background: url('../咖啡\(1\)\(1\).jpg') no-repeat center center fixed;
     background-size: cover;
+    filter: blur(30px);
 
     position: absolute;
     top: 50%;
@@ -128,3 +129,4 @@ nav#sidebar::-webkit-scrollbar-track,
 #markdown-container::-webkit-scrollbar-track {
     background: transparent;
 }
+
